@@ -26,6 +26,7 @@ export default function(config) {
     },
 
     webpack: {
+      mode: 'development',
       devtool: 'inline-source-map',
       resolve: {
         extensions: ['.ts', '.js']
@@ -42,10 +43,12 @@ export default function(config) {
           }
         }, {
           test: /\.ts$/,
-          loader: 'awesome-typescript-loader',
+          loader: 'ts-loader',
           exclude: /node_modules/,
           options: {
-            module: 'es2015'
+            compilerOptions: {
+              module: 'es2015'
+            }
           }
         }, {
           test: /src\/.+\.ts$/,
@@ -57,9 +60,9 @@ export default function(config) {
           }
         }]
       },
-      plugins: [
-        ...(config.singleRun ? [new webpack.NoEmitOnErrorsPlugin()] : [])
-      ]
+      optimization: {
+        noEmitOnErrors: config.singleRun
+      }
     },
 
     coverageIstanbulReporter: {
