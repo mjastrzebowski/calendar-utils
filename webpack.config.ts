@@ -1,6 +1,4 @@
-import * as webpackDateFnsExternals from 'webpack-date-fns-externals';
-
-module.exports = {
+export default {
   mode: 'production',
   entry: __dirname + '/src/calendar-utils.ts',
   output: {
@@ -9,9 +7,14 @@ module.exports = {
     libraryTarget: 'umd',
     library: 'calendarUtils'
   },
-  externals: [
-    webpackDateFnsExternals()
-  ],
+  externals: {
+    'date-fns': {
+      root: ['dateFns'],
+      commonjs: 'date-fns',
+      commonjs2: 'date-fns',
+      amd: 'date-fns'
+    }
+  },
   module: {
     rules: [{
       test: /\.ts$/,
