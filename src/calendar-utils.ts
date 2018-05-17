@@ -1,24 +1,26 @@
-import addDays from 'date-fns/esm/addDays';
-import addHours from 'date-fns/esm/addHours';
-import addMinutes from 'date-fns/esm/addMinutes';
-import addSeconds from 'date-fns/esm/addSeconds';
-import differenceInDays from 'date-fns/esm/differenceInDays';
-import differenceInMinutes from 'date-fns/esm/differenceInMinutes';
-import differenceInSeconds from 'date-fns/esm/differenceInSeconds';
-import endOfDay from 'date-fns/esm/endOfDay';
-import endOfMonth from 'date-fns/esm/endOfMonth';
-import endOfWeek from 'date-fns/esm/endOfWeek';
-import getDay from 'date-fns/esm/getDay';
-import isSameDay from 'date-fns/esm/isSameDay';
-import isSameMonth from 'date-fns/esm/isSameMonth';
-import isSameSecond from 'date-fns/esm/isSameSecond';
-import max from 'date-fns/esm/max';
-import setHours from 'date-fns/esm/setHours';
-import setMinutes from 'date-fns/esm/setMinutes';
-import startOfDay from 'date-fns/esm/startOfDay';
-import startOfMinute from 'date-fns/esm/startOfMinute';
-import startOfMonth from 'date-fns/esm/startOfMonth';
-import startOfWeek from 'date-fns/esm/startOfWeek';
+import {
+  addDays,
+  addHours,
+  addMinutes,
+  addSeconds,
+  differenceInDays,
+  differenceInMinutes,
+  differenceInSeconds,
+  endOfDay,
+  endOfMonth,
+  endOfWeek,
+  getDay,
+  isSameDay,
+  isSameMonth,
+  isSameSecond,
+  max,
+  setHours,
+  setMinutes,
+  startOfDay,
+  startOfMinute,
+  startOfMonth,
+  startOfWeek
+} from 'date-fns';
 
 export enum DAYS_OF_WEEK {
   SUNDAY = 0,

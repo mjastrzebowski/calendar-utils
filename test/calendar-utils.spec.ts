@@ -1,21 +1,23 @@
 /// <reference types="mocha" />
 
 import { expect, use } from 'chai';
-import addDays from 'date-fns/esm/addDays';
-import addHours from 'date-fns/esm/addHours';
-import addMinutes from 'date-fns/esm/addMinutes';
-import differenceInSeconds from 'date-fns/esm/differenceInSeconds';
-import endOfDay from 'date-fns/esm/endOfDay';
-import endOfMonth from 'date-fns/esm/endOfMonth';
-import endOfWeek from 'date-fns/esm/endOfWeek';
-import setHours from 'date-fns/esm/setHours';
-import setMilliseconds from 'date-fns/esm/setMilliseconds';
-import setMinutes from 'date-fns/esm/setMinutes';
-import setSeconds from 'date-fns/esm/setSeconds';
-import startOfDay from 'date-fns/esm/startOfDay';
-import startOfWeek from 'date-fns/esm/startOfWeek';
-import subDays from 'date-fns/esm/subDays';
-import subHours from 'date-fns/esm/subHours';
+import {
+  addDays,
+  addHours,
+  addMinutes,
+  differenceInSeconds,
+  endOfDay,
+  endOfMonth,
+  endOfWeek,
+  setHours,
+  setMilliseconds,
+  setMinutes,
+  setSeconds,
+  startOfDay,
+  startOfWeek,
+  subDays,
+  subHours
+} from 'date-fns';
 import * as sinon from 'sinon';
 import * as sinonChai from 'sinon-chai';
 import {
@@ -34,8 +36,7 @@ import {
   MonthView,
   SECONDS_IN_DAY,
   validateEvents,
-  WeekDay,
-  WeekViewEventRow
+  WeekDay
 } from '../src/calendar-utils';
 
 use(sinonChai);
