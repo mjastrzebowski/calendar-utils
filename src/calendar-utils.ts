@@ -54,6 +54,9 @@ export interface CalendarEvent<MetaType = any> {
   };
   draggable?: boolean;
   meta?: MetaType;
+  background?: boolean;
+  resourceId?: string | number;
+  orgResourceId?: string | number;
 }
 
 export interface WeekViewAllDayEvent {
@@ -126,6 +129,15 @@ export interface ViewPeriod {
   start: Date;
   end: Date;
   events: CalendarEvent[];
+}
+
+export interface CalendarResource<MetaType = any> {
+  id: string | number;
+  title: string;
+  color?: EventColor;
+  actions?: EventAction[];
+  cssClass?: string;
+  meta?: MetaType;
 }
 
 function getExcludedSeconds(
